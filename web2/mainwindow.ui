@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1175</width>
+    <height>771</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>1175</width>
+     <height>728</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1175</width>
+     <height>728</height>
+    </size>
+   </property>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1171</width>
+      <height>781</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>1151</width>
+       <height>731</height>
+      </rect>
+     </property>
+     <widget class="QWidget" name="image_widget">
+      <widget class="QListWidget" name="image_list_widget">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>10</y>
+         <width>901</width>
+         <height>431</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">    QListWidget {
+        border-radius: 10px; /* 设置圆角半径 */
+        border: 2px solid #3b3b3b; /* 设置边框 */
+        background-color: #f5f5f5; /* 设置背景颜色 */
+    }
+
+    QListWidget::Item:hover {
+        background: lightblue; /* 鼠标悬停时的背景色 */
+    }
+
+    QListWidget::item:selected {
+        background: lightgreen; /* 选中项的背景色 */
+    }
+
+    QScrollBar:vertical {
+        border: 2px solid grey;
+        background: #f1f1f1;
+        width: 15px;
+        margin: 22px 0 22px 0;
+        border-radius: 10px; /* 为滚动条容器添加圆角 */
+    }
+
+    QScrollBar::handle:vertical {
+        background: #888; /* 滑块的颜色 */
+        min-height: 0px;
+        border-radius: 10px; /* 设置滑块的圆角 */
+    }
+
+    QScrollBar::add-line:vertical {
+        border: 2px solid grey;
+        background: #32CC99;
+        height: 20px;
+        subcontrol-position: bottom;
+        subcontrol-origin: margin;
+        border-radius: 10px; /* 添加圆角 */
+    }
+
+    QScrollBar::sub-line:vertical {
+        border: 2px solid grey;
+        background: #32CC99;
+        height: 20px;
+        subcontrol-position: top;
+        subcontrol-origin: margin;
+        border-radius: 10px; /* 添加圆角 */
+    }
+
+    QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+        border: 2px solid grey;
+        width: 3px;
+        height: 3px;
+        background: white;
+        border-radius: 10px; /* 设置箭头部分的圆角 */
+    }
+
+    QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+        background: none;
+    }</string>
+       </property>
+      </widget>
+      <widget class="QTreeWidget" name="tree_widget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>201</width>
+         <height>701</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+    QTreeWidget {
+        border-radius: 10px; /* 设置圆角半径 */
+        border: 2px solid #3b3b3b; /* 设置边框 */
+        background-color: #f5f5f5; /* 设置背景颜色 */
+    }
+
+    QTreeWidget::Item:hover {
+        background: lightblue; /* 鼠标悬停时的背景色 */
+    }
+
+    QTreeWidget::item:selected {
+        background: lightgreen; /* 选中项的背景色 */
+    }
+
+    QTreeWidget::branch {
+        border: none; /* 分支的边框去除 */
+    }
+
+    QScrollBar:vertical {
+        border: 2px solid grey;
+        background: #f1f1f1;
+        width: 15px;
+        margin: 22px 0 22px 0;
+        border-radius: 10px; /* 为滚动条容器添加圆角 */
+    }
+
+    QScrollBar::handle:vertical {
+        background: #888; /* 滑块的颜色 */
+        min-height: 0px;
+        border-radius: 10px; /* 设置滑块的圆角 */
+    }
+
+    QScrollBar::add-line:vertical {
+        border: 2px solid grey;
+        background: #32CC99;
+        height: 20px;
+        subcontrol-position: bottom;
+        subcontrol-origin: margin;
+        border-radius: 10px; /* 添加圆角 */
+    }
+
+    QScrollBar::sub-line:vertical {
+        border: 2px solid grey;
+        background: #32CC99;
+        height: 20px;
+        subcontrol-position: top;
+        subcontrol-origin: margin;
+        border-radius: 10px; /* 添加圆角 */
+    }
+
+    QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+        border: 2px solid grey;
+        width: 3px;
+        height: 3px;
+        background: white;
+        border-radius: 10px; /* 设置箭头部分的圆角 */
+    }
+
+    QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+        background: none;
+    }
+
+</string>
+       </property>
+       <column>
+        <property name="text">
+         <string notr="true">/data</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>460</y>
+         <width>901</width>
+         <height>251</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">    QScrollArea {
+        border-radius: 10px; /* 设置 QScrollArea 的圆角 */
+        border: 2px solid #3b3b3b; /* 设置边框颜色 */
+        background-color: #f5f5f5; /* 设置背景颜色 */
+    }
+
+    QScrollArea::widget {
+        background: #ffffff; /* 设置 QScrollArea 内部的 widget 背景色 */
+    }
+
+    QScrollBar:vertical, QScrollBar:horizontal {
+        border: 2px solid grey;
+        background: #f1f1f1;
+        width: 15px;
+        height: 15px;
+        border-radius: 10px; /* 设置滚动条的圆角 */
+    }
+
+    QScrollBar::handle:vertical, QScrollBar::handle:horizontal {
+        background: #888; /* 滑块颜色 */
+        min-height: 20px;
+        min-width: 20px;
+        border-radius: 10px; /* 滑块的圆角 */
+    }
+
+    QScrollBar::add-line:vertical, QScrollBar::add-line:horizontal,
+    QScrollBar::sub-line:vertical, QScrollBar::sub-line:horizontal {
+        background: #32CC99;
+        border: 2px solid grey;
+        border-radius: 10px; /* 上下箭头的圆角 */
+    }
+
+    QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical,
+    QScrollBar::left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+        width: 3px;
+        height: 3px;
+        background: white;
+        border-radius: 10px; /* 箭头的圆角 */
+    }
+
+    QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical,
+    QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+        background: none; /* 隐藏滚动条的空白区域 */
+    }</string>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scroll_area">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>897</width>
+          <height>247</height>
+         </rect>
+        </property>
+        <widget class="QLabel" name="view_label">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>10</y>
+           <width>200</width>
+           <height>200</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>empty</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="line_edit">
+         <property name="geometry">
+          <rect>
+           <x>290</x>
+           <y>60</y>
+           <width>171</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Empty</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="filter_edit">
+         <property name="geometry">
+          <rect>
+           <x>260</x>
+           <y>170</y>
+           <width>231</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="sort_box">
+         <property name="geometry">
+          <rect>
+           <x>600</x>
+           <y>100</y>
+           <width>78</width>
+           <height>24</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="flush_btn">
+         <property name="geometry">
+          <rect>
+           <x>650</x>
+           <y>140</y>
+           <width>25</width>
+           <height>25</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="left_btn">
+         <property name="geometry">
+          <rect>
+           <x>600</x>
+           <y>140</y>
+           <width>31</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>&lt;</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="setting"/>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1175</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
